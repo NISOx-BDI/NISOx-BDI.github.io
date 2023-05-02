@@ -57,6 +57,8 @@ def _author_Shorten(authorList):
     return shortenedAuthorList
 
 def _andlist(ss, sep=', ', seplast=', and ', septwo=' and '):
+    # Convert to list
+    ss = list(ss)
     #This function creates a list of authors from a set of authors.
     if len(ss) <= 1:
         return ''.join(ss)
