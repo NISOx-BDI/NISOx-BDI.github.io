@@ -268,13 +268,13 @@ def main(bibfile, template, pageObj):
     
     #If we are creating a publications page just print out the template.
     if pageObj == 'Publications':
-        print(out.encode("utf-8"))
+        print(out)
     #If we are looking at Research pages work out where to save them and output
     #to there.
     else:
         fname = os.path.join(os.path.dirname(PATH), 'research', pageObj['name'], 'index.html')
         with open(fname, 'w') as f:
-            f.write(out.encode("utf8"))
+            f.write(out)
 
 if __name__ == '__main__':
     main(*sys.argv[1:])
