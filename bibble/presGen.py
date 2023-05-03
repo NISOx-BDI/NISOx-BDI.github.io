@@ -65,6 +65,8 @@ def _author_Shorten(authorList, numAuthors):
     return shortenedAuthorList
 
 def _andlist(ss, sep=', ', seplast=', and ', septwo=' and '):
+    # Convert to list
+    ss = list(ss)
     #This function lists the authors.
     if len(ss) <= 1:
         return ''.join(ss)
@@ -188,7 +190,7 @@ def create_index_html(context, outputInstruct):
         #Render the template and output.
         with open(fname, 'w') as f:
             html = render_template('confTemplate.html',context)
-            f.write(html.encode("utf8"))
+            f.write(html)
 
     #Creating the main presentations page.  
     if outputInstruct == 'pres':
@@ -209,7 +211,7 @@ def create_index_html(context, outputInstruct):
         #Render the template and output.
         with open(fname, 'w') as f:
             html = render_template('courseTemplate.html',context)
-            f.write(html.encode("utf8"))
+            f.write(html)
  
  
 def main():
@@ -232,12 +234,12 @@ def main():
     # Read courses YAML file
     with open(os.path.join(PATH, "..", "_data", "yml","courses.yml"), 'r') as stream:
         #Load in the poster structure.
-        courses_struct = yaml.load(stream)
+        courses_struct = yaml.load(stream, Loader=yaml.Loader)
         
     # Read conferences YAML file
     with open(os.path.join(PATH, "..", "_data", "yml","conferences.yml"), 'r') as stream:
         #Load in the conference structure.
-        conferences = yaml.load(stream)
+        conferences = yaml.load(stream, Loader=yaml.Loader)
 
         #Create the main presentations page.
         contextPres['conferences'] = conferences

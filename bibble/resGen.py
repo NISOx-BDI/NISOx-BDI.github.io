@@ -28,7 +28,7 @@ def main():
     # Read conferences Research page file
     with open(os.path.join(PATH, "..", "_data", "yml","resPages.yml"), 'r') as stream:
         #Load in the research page structure.
-        resPages = yaml.load(stream)
+        resPages = yaml.load(stream, Loader=yaml.Loader)
 
     #Make each page in the resPages.yml file.
     for pageObj in resPages:
@@ -57,7 +57,7 @@ def main():
     out = tmpl.render(context)
     
     #Output.
-    print(out.encode("utf8"))
+    print(out)
 
 
 if __name__ == '__main__':
