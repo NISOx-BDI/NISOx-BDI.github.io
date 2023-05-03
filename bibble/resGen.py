@@ -57,7 +57,7 @@ def main():
     out = tmpl.render(context)
     
     #Output.
-    print(out.encode("utf8"))
+    print(out)
 
 
 if __name__ == '__main__':
