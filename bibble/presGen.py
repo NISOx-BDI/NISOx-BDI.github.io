@@ -234,12 +234,12 @@ def main():
     # Read courses YAML file
     with open(os.path.join(PATH, "..", "_data", "yml","courses.yml"), 'r') as stream:
         #Load in the poster structure.
-        courses_struct = yaml.load(stream)
+        courses_struct = yaml.load(stream, Loader=yaml.Loader)
         
     # Read conferences YAML file
     with open(os.path.join(PATH, "..", "_data", "yml","conferences.yml"), 'r') as stream:
         #Load in the conference structure.
-        conferences = yaml.load(stream)
+        conferences = yaml.load(stream, Loader=yaml.Loader)
 
         #Create the main presentations page.
         contextPres['conferences'] = conferences
