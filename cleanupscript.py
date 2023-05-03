@@ -25,7 +25,7 @@ PATH = os.path.dirname(os.path.abspath(__file__))
 # Read Research pages file
 with open(os.path.join(PATH, "_data", "yml","resPages.yml"), 'r') as stream:
     #Load in the research page structure.
-    resPages = yaml.load(stream)
+    resPages = yaml.load(stream,Loader=yaml.Loader)
 
     #Remove any code generated files.
     for pageObj in resPages:
@@ -36,7 +36,7 @@ with open(os.path.join(PATH, "_data", "yml","resPages.yml"), 'r') as stream:
 # Read conferences file
 with open(os.path.join(PATH, "_data", "yml","conferences.yml"), 'r') as stream:
     #Load in the research page structure.
-    conferences = yaml.load(stream)
+    conferences = yaml.load(stream,Loader=yaml.Loader)
 
     #Remove any code generated files.
     for conference in conferences:
