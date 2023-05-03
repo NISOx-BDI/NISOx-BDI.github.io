@@ -57,6 +57,8 @@ def _author_Shorten(authorList):
     return shortenedAuthorList
 
 def _andlist(ss, sep=', ', seplast=', and ', septwo=' and '):
+    # Convert to list
+    ss = list(ss)
     #This function creates a list of authors from a set of authors.
     if len(ss) <= 1:
         return ''.join(ss)
@@ -178,7 +180,7 @@ def _extra_urls(entry):
           ... }
     """
     urls = {}
-    for k, v in entry.fields.iteritems():
+    for k, v in entry.fields.items():
         if not k.endswith('_url'):
             continue
         k = k[:-4]
@@ -268,13 +270,13 @@ def main(bibfile, template, pageObj):
     
     #If we are creating a publications page just print out the template.
     if pageObj == 'Publications':
-        print(out.encode("utf-8"))
+        print(out)
     #If we are looking at Research pages work out where to save them and output
     #to there.
     else:
         fname = os.path.join(os.path.dirname(PATH), 'research', pageObj['name'], 'index.html')
         with open(fname, 'w') as f:
-            f.write(out.encode("utf8"))
+            f.write(out)
 
 if __name__ == '__main__':
     main(*sys.argv[1:])
