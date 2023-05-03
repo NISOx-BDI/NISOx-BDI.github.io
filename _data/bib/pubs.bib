@@ -110,12 +110,14 @@ url = {https://www.biorxiv.org/content/10.1101/2022.03.09.483645v1{\%}0Ahttps://
 volume = {264},
 year = {2022}
 }
-@article{Goeman2022,
+@techreport{Goeman2022,
+journal = {arXiv},
 archivePrefix = {arXiv},
 arxivId = {2208.04780},
 author = {Goeman, Jelle J. and G{\'{o}}recki, Pawe{\l} and Monajemi, Ramin and Chen, Xu and Nichols, Thomas E. and Weeda, Wouter},
 eprint = {2208.04780},
 file = {:Users/nichols/Papers/2022/Goeman et al. - 2022 - Unknown - Cluster extent inference revisited quantification and localization of brain activity.pdf:pdf},
+month = {aug},
 pages = {1--52},
 title = {{Cluster extent inference revisited: quantification and localization of brain activity}},
 url = {http://arxiv.org/abs/2208.04780},
@@ -164,13 +166,21 @@ title = {{The expected behaviour of random fields in high dimensions: contradict
 volume = {90},
 year = {2022}
 }
-@techreport{Taschler2022,
-author = {Taschler, Bernd and Smith, Stephen M and Nichols, Thomas E},
-doi = {10.1101/2022.03.17.484732},
-file = {:Users/nichols/Papers/2022/Taschler, Smith, Nichols - 2022 - Unknown - Causal Inference on Neuroimaging Data with Mendelian Randomisation.pdf:pdf},
-keywords = {causal inference,imaging derived phenotypes,mendelian randomisation},
-pages = {1--42},
-title = {{Causal Inference on Neuroimaging Data with Mendelian Randomisation}},
+@article{Taschler2022a,
+author = {Taschler, Bernd and Smith, Stephen M. and Nichols, Thomas E.},
+doi = {10.1016/j.neuroimage.2022.119385},
+file = {:Users/nichols/Papers/2022/Taschler, Smith, Nichols - 2022 - NeuroImage - Causal inference on neuroimaging data with Mendelian randomisation.pdf:pdf},
+issn = {10538119},
+journal = {NeuroImage},
+keywords = {Causal inference,Imaging derived phenotypes,Mendelian randomisation},
+month = {sep},
+number = {March},
+pages = {119385},
+pmid = {35714886},
+publisher = {Elsevier Inc.},
+title = {{Causal inference on neuroimaging data with Mendelian randomisation}},
+url = {https://doi.org/10.1016/j.neuroimage.2022.119385 https://linkinghub.elsevier.com/retrieve/pii/S1053811922005043},
+volume = {258},
 year = {2022}
 }
 @article{Marek2022,
@@ -189,6 +199,7 @@ volume = {603},
 year = {2022}
 }
 @techreport{Maullin-Sapey2022,
+journal = {arXiv},
 archivePrefix = {arXiv},
 arxivId = {2201.02743},
 author = {Maullin-Sapey, Thomas and Schwartzman, Armin and Nichols, Thomas E},
@@ -272,7 +283,7 @@ title = {{Discussion on ``distributional independent component analysis for dive
 url = {https://onlinelibrary.wiley.com/doi/10.1111/biom.13591},
 year = {2021}
 }
-@article{Kindalova2021a,
+@techreport{Kindalova2021a,
 author = {Kindalova, Petya and Veldsman, Michele and Nichols, Thomas E and Kosmidis, Ioannis},
 doi = {10.1101/2021.11.01.466751},
 file = {:Users/nichols/Papers/2021/Kindalova et al. - 2021 - Unknown - Penalized generalized estimating equations for relative risk regression with applications to brain l.pdf:pdf},
@@ -1243,7 +1254,6 @@ volume = {144},
 year = {2017}
 }
 @techreport{Samartsidis2017,
-abstract = {A typical neuroimaging study will produce a 3D brain statistic image that summarises the evidence for activation during the experiment. However, for practical reasons those images are rarely published; instead, authors only report the (x,y,z) locations of local maxima in the statistic image. Neuroimaging meta-analyses use these foci from multiple studies to find areas of consistent activation across the human brain. However, current methods in the field do not account for study-specific characteristics. Therefore, we propose a fully Bayesian model based on log-Gaussian Cox processes that allows for the inclusion of study-specific variables. We present an efficient MCMC scheme based on the Hamiltonian Monte Carlo algorithm to simulate draws from the posterior. Computational time is significantly reduced through a parallel implementation using a graphical processing unit card. We evaluate the method on both simulated and real data.},
 archivePrefix = {arXiv},
 arxivId = {1701.02643},
 author = {Samartsidis, Pantelis and Wager, Tor D. and Barrett, Lisa Feldman and Atzil, Shir and Eickhoff, Simon B. and Nichols, Thomas E. and Johnson, Timothy D.},
@@ -1255,17 +1265,21 @@ title = {{Bayesian log-Gaussian Cox process regression with applications to fMRI
 url = {http://arxiv.org/abs/1701.02643},
 year = {2017}
 }
-@techreport{Ganjgahi179150,
+@article{Ganjgahi2018,
 author = {Ganjgahi, Habib and Winkler, Anderson M. and Glahn, David C. and Blangero, John and Donohue, Brian and Kochunov, Peter and Nichols, Thomas E.},
-title = {Fast and Powerful Genome Wide Association Analysis of Dense Genetic Data with High Dimensional Imaging Phenotypes},
-year = {2017},
+doi = {10.1038/s41467-018-05444-6},
+file = {:Users/nichols/Papers/2018/Ganjgahi et al. - 2018 - Nature Communications - Fast and powerful genome wide association of dense genetic data with high dimensional i.pdf:pdf},
+isbn = {4146701805},
+issn = {2041-1723},
+journal = {Nature Communications},
 month = {aug},
-doi = {10.1101/179150},
-publisher = {Cold Spring Harbor Laboratory},
-abstract = {Genome wide association (GWA) analysis of brain imaging phenotypes can advance our understanding of the genetic basis of normal and disorder-related variation in the brain. GWA approaches typically use linear mixed effect models to account for non-independence amongst subjects due to factors such as family relatedness and population structure. The use of these models with high-dimensional imaging phenotypes presents enormous challenges in terms of computational intensity and the need to account multiple testing in both the imaging and genetic domain. Here we present method that makes mixed models practical with high-dimensional traits by a combination of a transformation applied to the data and model, and the use of a non-iterative variance component estimator. With such speed enhancements permutation tests are feasible, which allows inference on powerful spatial tests like the cluster size statistic.},
-URL = {https://www.biorxiv.org/content/early/2017/08/21/179150},
-eprint = {https://www.biorxiv.org/content/early/2017/08/21/179150.full.pdf},
-journal = {bioRxiv}
+number = {1},
+pages = {3254},
+publisher = {Springer US},
+title = {{Fast and powerful genome wide association of dense genetic data with high dimensional imaging phenotypes}},
+url = {http://dx.doi.org/10.1038/s41467-018-05444-6 http://www.nature.com/articles/s41467-018-05444-6 https://www.nature.com/articles/s41467-018-05444-6},
+volume = {9},
+year = {2018}
 }
 @article{Poldrack2016,
 abstract = {Functional neuroimaging techniques have transformed our ability to probe the neurobiological basis of behaviour and are increasingly being applied by the wider neuroscience community. However, concerns have recently been raised that the conclusions that are drawn from some human neuroimaging studies are either spurious or not generalizable. Problems such as low statistical power, flexibility in data analysis, software errors and a lack of direct replication apply to many fields, but perhaps particularly to functional MRI. Here, we discuss these problems, outline current and suggested best practices, and describe how we think the field should evolve to produce the most meaningful and reliable answers to neuroscientific questions.},
